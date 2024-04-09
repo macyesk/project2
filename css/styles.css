@@ -1,5 +1,26 @@
+:root {
+    --primary: #f8f8f8;
+    --secondary: #16667A;
+    --accent: #FFA62B;
+}
+
 * {
-    background-color: whitesmoke;
+    background-color: var(--primary);
 }
 
 /* nav bar styling */
+.navbar {
+    background-color: var(--secondary);
+}
+
+.navbar-nav .accent-link.accent-link.accent-link.accent-link {
+    color: var(--accent)
+}
+
+.navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--accent);
+}
