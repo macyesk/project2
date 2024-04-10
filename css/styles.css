@@ -9,6 +9,7 @@
 }
 
 /* nav bar styling */
+/* why isn't this making the text white? */
 .navbar {
     background-color: var(--secondary);
 }
@@ -18,7 +19,7 @@
 }
 
 .navbar-nav .nav-link {
-    color: var(--accent);
+    color: var(--secondary);
 }
 
 .navbar-nav .nav-link:hover {
