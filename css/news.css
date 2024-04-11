@@ -1,0 +1,33 @@
+:root {
+    --primary: black;
+    --secondary: #ffffff;
+    --accent: #8e2bff;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+* {
+    background-color: var(--primary);
+}
+
+
+/* nav bar styling */
+/* why is there a weird space between the nav bar and the body*/
+.navbar {
+    background-color: var(--secondary);
+}
+
+.navbar-nav .accent-link.accent-link.accent-link.accent-link {
+    color: var(--accent)
+}
+
+.navbar-nav .nav-link {
+    color: var(--secondary);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--accent);
+}
