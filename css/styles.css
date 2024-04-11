@@ -6,10 +6,13 @@
 
 html {
     scroll-behavior: smooth;
+
 }
 
 * {
     background-color: var(--primary);
+    margin: 0;
+    padding: 0;
 }
 
 /* nav bar styling */
@@ -101,28 +104,26 @@ html {
 /* grid layout, the about us card will be on row 1, the mission sstatement will be on row 2,
 there will be three photos on the bottom (row 3 will have three sections */
 .aboutus {
+    background-color: var(--primary);
     display: grid;
     grid-template-rows: 80px 80px 100px;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     max-width: 800px;
-    margin: 20px auto;
+    margin: auto;
     padding: 10px;
 }
 
 .card-about,
 .mission-statement {
     grid-column: span 2;
-    /* Spans two columns */
 }
 
 .photos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* Three columns */
     gap: 10px;
     grid-column: span 3;
-    /* Spans all three columns */
 }
 
 .photo img {
