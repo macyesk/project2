@@ -1,6 +1,6 @@
 :root {
-    --primary: black;
-    --secondary: #ffffff;
+    --primary: #ffffff;
+    --secondary: black;
     --accent: #8e2bff;
 }
 
@@ -16,8 +16,8 @@ html {
 }
 
 /* nav bar styling */
-/* why isn't this making the text white? */
-.navbar {
+/* why isn't this making the background black? */
+.navbar.navbar-expand-lg {
     background-color: var(--secondary);
 }
 
@@ -100,18 +100,17 @@ html {
     }
 }
 
-/* about us */
-/* grid layout, the about us card will be on row 1, the mission sstatement will be on row 2,
-there will be three photos on the bottom (row 3 will have three sections */
 .aboutus {
     background-color: var(--primary);
     display: grid;
-    grid-template-rows: 80px 80px 100px;
+    grid-template-rows: 80px 80px 100px 100px;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     max-width: 800px;
     margin: auto;
-    padding: 10px;
+    padding: 40px;
+    /* padding to add bottom of website */
+    padding-bottom: 60px;
 }
 
 .card-about,
@@ -121,9 +120,13 @@ there will be three photos on the bottom (row 3 will have three sections */
 
 .photos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 5fr);
     gap: 10px;
     grid-column: span 3;
+    margin-bottom: 60px;
+    /* Adjusted margin bottom */
+    padding-bottom: 50px;
+    /* Adjusted padding bottom */
 }
 
 .photo img {
