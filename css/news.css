@@ -1,27 +1,24 @@
 :root {
-    --primary: black;
-    --secondary: #ffffff;
+    --primary: #ffffff;
+    --secondary: black;
     --accent: #8e2bff;
 }
 
 html {
     scroll-behavior: smooth;
-
 }
 
 * {
     background-color: var(--primary);
 }
 
-
 /* nav bar styling */
-/* why is there a weird space between the nav bar and the body*/
 .navbar {
     background-color: var(--secondary);
 }
 
-.navbar-nav .accent-link.accent-link.accent-link.accent-link {
-    color: var(--accent)
+.navbar-nav .accent-link {
+    color: var(--accent);
 }
 
 .navbar-nav .nav-link {
@@ -30,4 +27,41 @@ html {
 
 .navbar-nav .nav-link:hover {
     color: var(--accent);
+}
+
+/* logo styling */
+.logo {
+    position: absolute;
+    top: 100px;
+    /* Adjust as needed to move the logo down */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo img {
+    border-radius: 50%;
+}
+
+.logo:hover {
+    animation: spin 3s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+        /* Start from 0 degree rotation */
+    }
+
+    to {
+        transform: rotate(360deg);
+        /* Rotate to 360 degrees for one complete rotation */
+    }
+}
+
+/* Title styling */
+.title {
+    position: relative;
+    top: 150px;
+    text-align: center;
+    color: var(--secondary);
 }
