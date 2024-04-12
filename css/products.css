@@ -1,27 +1,26 @@
 :root {
-    --primary: white;
+    --primary: #ffffff;
     --secondary: black;
     --accent: #8e2bff;
 }
 
 html {
     scroll-behavior: smooth;
-
 }
 
 * {
-    background-color: var(--primary);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-
 /* nav bar styling */
-/* why isn't this making the text white? */
-.navbar {
+.navbar.navbar-expand-lg {
     background-color: var(--secondary);
 }
 
 .navbar-nav .accent-link.accent-link.accent-link.accent-link {
-    color: var(--accent)
+    color: var(--accent);
 }
 
 .navbar-nav .nav-link {
