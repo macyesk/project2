@@ -16,7 +16,7 @@ html {
 
 /* nav bar styling */
 .navbar.navbar-expand-lg {
-    background-color: var(--secondary);
+    background-color: var(--primary);
 }
 
 .navbar-nav .accent-link.accent-link.accent-link.accent-link {
