@@ -16,50 +16,50 @@ html {
 
 /* nav bar styling */
 .navbar.navbar-expand-lg {
-    background-color: var(--primary;
-            color: var(--primary);
+    background-color: var(--primary);
+    color: var(--primary);
+}
+
+.navbar-nav .accent-link.accent-link.accent-link.accent-link {
+    color: var(--accent);
+}
+
+.navbar-nav .nav-link {
+    color: var(--secondary);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--accent);
+}
+
+.logo {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.logo:hover {
+    animation: spin 3s;
+}
+
+/* .logo:hover {
+    animation: spin 3s infinite linear;
+} */
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+        /* Start from 0 degree rotation */
     }
 
-    .navbar-nav .accent-link.accent-link.accent-link.accent-link {
-        color: var(--accent);
+    to {
+        transform: rotate(360deg);
+        /* Rotate to 360 degrees for one complete rotation */
     }
-
-    .navbar-nav .nav-link {
-        color: var(--secondary);
-    }
-
-    .navbar-nav .nav-link:hover {
-        color: var(--accent);
-    }
-
-    /* logo styling */
-    .logo {
-        position: relative;
-        top: 150px;
-        /* Adjust as needed to move the logo down */
-        left: 50%;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        transform: translateX(-50%);
-    }
-
-    .logo img {
-        border-radius: 50%;
-    }
-
-    .logo:hover {
-        animation: spin 3s infinite linear;
-    }
-
-    @keyframes spin {
-        from {
-            transform: rotate(0deg);
-            /* Start from 0 degree rotation */
-        }
-
-        to {
-            transform: rotate(360deg);
-            /* Rotate to 360 degrees for one complete rotation */
-        }
-    }
+}
