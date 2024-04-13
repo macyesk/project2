@@ -9,6 +9,7 @@ html {
 }
 
 * {
+    background-color: var(--primary);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -16,19 +17,25 @@ html {
 
 /* nav bar styling */
 .navbar.navbar-expand-lg {
-    background-color: var(--secondary);
+  background-color: var(--secondary);
+  color: var(--primary);
 }
 
 .navbar-nav .accent-link.accent-link.accent-link.accent-link {
-    color: var(--accent);
+  color: var(--accent);
+}
+
+.nav-item {
+  color: var(--primary);
 }
 
 .navbar-nav .nav-link {
-    color: var(--secondary);
+  color: var(--secondary);
 }
 
 .navbar-nav .nav-link:hover {
-    color: var(--accent);
+  color: var(--accent);
+}
 }
 
 /* logo styling */
