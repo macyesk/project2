@@ -33,15 +33,15 @@ html {
 
 /* logo styling */
 .logo {
-    position: absolute;
-    top: 150px;
+    position: relative;
     /* Adjust as needed to move the logo down */
-    left: 50%;
-    transform: translateX(-50%);
+    justify-content: center;
+    background-color: transparent;
 }
 
 .logo img {
     border-radius: 50%;
+    width: 100px;
 }
 
 .logo:hover {
