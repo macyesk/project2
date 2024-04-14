@@ -90,3 +90,16 @@ html {
   text-align: center;
   color: var(--secondary);
 }
+
+form {
+  margin: 5em;
+}
+
+label {
+  font-size: 2em;
+}
+
+.instructions {
+  margin: 4em;
+  text-align: center;
+}

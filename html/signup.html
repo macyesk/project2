@@ -35,7 +35,7 @@
         </li>
         <li class="nav-item">
 
-          <a class="nav-link active accent-link" aria-current="page" href="#">Sign Up</a>
+          <a class="nav-link active accent-link" aria-current="page" href="#">Record Request</a>
         </li>
       </ul>
     </div>
@@ -51,12 +51,53 @@
             <img src="/assets/logo-color.png" width="100px" height="100px" alt="logo">
           </div>
           <h1 class="display-3 font-weight-bold title">
-            Sign Up
+            Record Request
           </h1>
         </div>
       </div>
     </div>
   </section>
+
+  <h3 class="instructions">If there is an album you would like but don't see on our product page, request it here and we'll let you know when we find it!</h3>
+  <form action="">
+    <label for="artist-name">Artist Name</label>
+    <select name="artist-name" class="form-select form-select-lg mb-3" aria-label="Large select example">
+      <option selected>Open this select menu</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+    
+    <label for="album-name">Album Name</label>
+    <select name="album-name" class="form-select form-select-lg mb-3" aria-label="Large select example">
+      <option selected>Open this select menu</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+    <div class="row name-input">
+      <div class="mb-3 col-6">
+        <label for="first-name" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="first-name" aria-describedby="emailHelp">
+    
+      </div>
+      <div class="mb-3 col-6">
+        <label for="last-name" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="last-name" aria-describedby="emailHelp">
+      </div>
+    </div>
+    <div class="row contact-input">
+      <div class="mb-3 col-6">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3 col-6">
+        <label for="phone-number-input" class="form-label">Phone Number</label>
+        <input type="tel" class="form-control" id="phone-number-input" aria-describedby="emailHelp">
+      </div>
+    </div>
+    
+  </form>
 </body>
 
 </html>
