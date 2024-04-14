@@ -124,3 +124,48 @@ h3,
 p {
     margin: 0;
 }
+
+/* 2X3 photo grid styling */
+.grid-container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.photos {
+    grid-row: 1;
+    grid-column: 1 / span 6;
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+}
+
+/* Set width for .photo */
+.photo1,
+.photo2,
+.photo3 {
+    width: calc(100% / 3 - 10px);
+    margin-right: 10px;
+}
+
+.concertrec,
+.playlists,
+.artistspotlight {
+    grid-row: 1;
+    grid-column: 1 / span 6;
+}
+
+.photo img {
+    max-width: 100%;
+    height: auto;
+    border: solid 10px var(--accent);
+}
+
+.concertrec,
+.playlists,
+.artistspotlight {
+    padding: 10px;
+    background-color: var(--primary);
+    border-radius: 5px;
+}
