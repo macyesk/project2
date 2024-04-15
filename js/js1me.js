@@ -1,3 +1,11 @@
+
+fetch("https://t3ogxvus80.execute-api.us-east-1.amazonaws.com/musicData")
+  .then((response) => response.json())
+  .then((data) => {
+    useData(data);
+    // function to execute when the data is retrieved
+  });
+
 // JS for Table on Products page begins here
 function myFunction() {
     // Declare variables
@@ -21,3 +29,4 @@ function myFunction() {
     }
 }
 // JS for Table on Products page ends here
+
