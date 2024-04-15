@@ -17,26 +17,25 @@ html {
 
 /* nav bar styling */
 .navbar.navbar-expand-lg {
-  background-color: var(--secondary);
-  color: var(--primary);
+    background-color: var(--secondary);
+    color: var(--primary);
 
 }
 
 .navbar-nav .accent-link.accent-link.accent-link.accent-link {
-  color: var(--accent);
+    color: var(--accent);
 }
 
 .nav-item {
-  color: var(--primary);
+    color: var(--primary);
 }
 
 .navbar-nav .nav-link {
-  color: var(--secondary);
+    color: var(--secondary);
 }
 
 .navbar-nav .nav-link:hover {
-  color: var(--accent);
-}
+    color: var(--accent);
 }
 
 .logo {
@@ -79,7 +78,7 @@ html {
 .card {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #f9f9f9;
+    background-color: var(--primary);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -115,6 +114,7 @@ html {
 .card2 {
     display: flex;
     flex-direction: column;
+    background-color: var(--primary);
 }
 
 .row {
@@ -179,4 +179,29 @@ p {
     padding: 10px;
     background-color: var(--primary);
     border-radius: 5px;
+}
+
+/*font awesome animation*/
+.musicnote {
+    position: relative;
+    align-items: left;
+    display: inline-block;
+    /* overflow: hidden; */
+    /* Ensure the overflow is hidden to prevent the icon from showing outside the card */
+}
+
+.musicnote i {
+    left: -100px;
+    animation: moveMusicNote 3s linear forwards;
+}
+
+@keyframes moveMusicNote {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+
+    }
 }
