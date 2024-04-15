@@ -195,6 +195,7 @@
     <tr class="header">
       <th style="width:60%;">Artist</th>
       <th style="width:40%;">Album</th>
+      <th style="width:40%;">Genre</th>
     </tr>
     <tr>
       <td>Aidan Bisset</td>
@@ -238,7 +239,7 @@
       table = document.getElementById("myTable");
       tr = table.getElementsByTagName("tr");
       for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0]; // the 0 allows for the artist name to be searched for. A 1 would be the album
+        td = tr[i].getElementsByTagName("td")[2]; // the 0 allows for the artist name to be searched for. A 1 would be the album A 2 would be the genre
         if (td) {
           txtValue = td.textContent || td.innerText;
           if (txtValue.toUpperCase().indexOf(filter) > -1) {
