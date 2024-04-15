@@ -40,14 +40,15 @@ html {
 /* logo styling */
 .logo {
   position: relative;
-  /* Adjust as needed to move the logo down */
-  justify-content: center;
+  margin-top: 20px;
+  text-align: center;
   background-color: transparent;
 }
 
 .logo img {
   border-radius: 50%;
   width: 100px;
+  
 }
 
 .logo:hover {
