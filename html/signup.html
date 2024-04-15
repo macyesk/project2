@@ -62,21 +62,25 @@
   <h3 class="instructions">If there is an album you would like but don't see on our product page, request it here and
     we'll let you know when we find it!</h3>
   <form id="orderForm" action="#">
-    <label for="artist-name">Artist Name</label>
-    <select name="artist-name" class="form-select form-select-lg mb-3" aria-label="Large select example">
-      <option selected>Open this select menu</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-    </select>
+    <label for="artist-name" class="form-label">Artist Name</label>
+    <input type="text" class="form-control" id="artist-name" aria-describedby="emailHelp">
+
 
     <label for="album-name">Album Name</label>
-    <select name="album-name" class="form-select form-select-lg mb-3" aria-label="Large select example">
+    <input type="text" class="form-control" id="album-name" aria-describedby="emailHelp">
+
+    <label for="genre">Genre</label>
+    <select name="genre" class="form-select form-select-lg mb-3" aria-label="Large select example">
       <option selected>Open this select menu</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+      <option value="1">Rock</option>
+      <option value="2">RnB</option>
+      <option value="3">Classical</option>
+      <option value="3">Pop</option>
+      <option value="3">Country</option>
+      <option value="3">Jazz</option>
+
     </select>
+
     <div class="row name-input">
       <div class="mb-3 col-6">
         <label for="first-name" class="form-label">First Name</label>
