@@ -48,7 +48,7 @@ html {
 .logo img {
   border-radius: 50%;
   width: 100px;
-  
+
 }
 
 .logo:hover {
@@ -100,21 +100,24 @@ html {
   grid-column: 1 / span 2;
   grid-row: 1 / span 4;
   border: 2px solid black;
-  
+
 }
+
 .pic-2 {
   grid-column: 3 / span 1;
   grid-row: 1 / span 2;
   border: 2px solid black;
-  
+
 
 }
+
 .pic-3 {
   grid-column: 4 / span 1;
   grid-row: 1 / span 2;
   border: 2px solid black;
 
 }
+
 .pic-4 {
   grid-column: 3 / span 2;
   grid-row: 3 / span 2;
@@ -127,14 +130,61 @@ html {
 
 .article-pic {
   display: flex;
- 
+
   overflow: hidden
 }
 
 .article-pic img {
   flex-shrink: 0;
   min-width: 100%;
-  
+
+}
+
+/* modal css */
+
+/* Modal Container */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Positioning context for overlay */
+  z-index: 1;
+  /* Sit on top of everything */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  /* Enable scrolling if content is too tall */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent overlay */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  /* Center modal vertically and horizontally */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  /* Set max width if needed */
+}
+
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 800px) {
@@ -155,16 +205,19 @@ html {
     grid-row: 1 / span 1;
     border: 2px solid black;
   }
+
   .pic-2 {
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
     border: 2px solid black;
   }
+
   .pic-3 {
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
     border: 2px solid black;
   }
+
   .pic-4 {
     grid-column: 3 / span 1;
     grid-row: 2 / span 1;
