@@ -1,69 +1,191 @@
 :root {
-    --primary: #ffffff;
-    --secondary: black;
-    --accent: #8e2bff;
+  --primary: #ffffff;
+  --secondary: black;
+  --accent: #8e2bff;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  background-color: var(--primary);
+  margin: 0;
+  padding: 0;
 }
 
 /* nav bar styling */
 .navbar.navbar-expand-lg {
-    background-color: var(--primary);
+  background-color: var(--secondary);
+  color: var(--primary);
 }
 
 .navbar-nav .accent-link.accent-link.accent-link.accent-link {
-    color: var(--accent);
+  color: var(--accent);
+}
+
+.nav-item {
+  color: var(--primary);
 }
 
 .navbar-nav .nav-link {
-    color: var(--secondary);
+  color: var(--secondary);
 }
 
 .navbar-nav .nav-link:hover {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 /* logo styling */
 .logo {
-    position: absolute;
-    top: 100px;
-    /* Adjust as needed to move the logo down */
-    left: 50%;
-    transform: translateX(-50%);
+  position: relative;
+  /* Adjust as needed to move the logo down */
+  justify-content: center;
+  background-color: transparent;
 }
 
 .logo img {
-    border-radius: 50%;
+  border-radius: 50%;
+  width: 100px;
 }
 
 .logo:hover {
-    animation: spin 3s infinite linear;
+  animation: spin 3s infinite linear;
 }
 
 @keyframes spin {
-    from {
-        transform: rotate(0deg);
-        /* Start from 0 degree rotation */
-    }
+  from {
+    transform: rotate(0deg);
+    /* Start from 0 degree rotation */
+  }
 
-    to {
-        transform: rotate(360deg);
-        /* Rotate to 360 degrees for one complete rotation */
-    }
+  to {
+    transform: rotate(360deg);
+    /* Rotate to 360 degrees for one complete rotation */
+  }
 }
 
-/* Title styling */
-.title {
-    position: relative;
-    top: 150px;
-    text-align: center;
-    color: var(--secondary);
+.section {
+  position: relative;
+  top: 150px;
+  text-align: center;
+  color: var(--secondary);
+}
+
+.article-title h1 {
+  position: relative;
+  text-align: center;
+  font-size: 100px;
+}
+
+.article-container {
+  margin: 2em;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 10px 5px 20px black;
+}
+
+.article-image-grid {
+  margin: 2em;
+  display: grid;
+  gap: 10px;
+  height: 75vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.pic-1 {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 4;
+  border: 2px solid black;
+}
+.pic-2 {
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 2;
+  border: 2px solid black;
+}
+.pic-3 {
+  grid-column: 4 / span 1;
+  grid-row: 1 / span 2;
+  border: 2px solid black;
+}
+.pic-4 {
+  grid-column: 3 / span 2;
+  grid-row: 3 / span 2;
+  border: 2px solid black;
+}
+
+.article-text {
+  margin: 2em;
+}
+
+@media screen and (min-width: 600px) {
+  .article-container {
+    margin: 2em;
+  }
+
+  .article-image-grid {
+    display: grid;
+    height: 100vh;
+    width: 75vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .pic-1 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    border: 2px solid black;
+  }
+  .pic-2 {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    border: 2px solid black;
+  }
+  .pic-3 {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    border: 2px solid black;
+  }
+  .pic-4 {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+    border: 2px solid black;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .article-container {
+    margin: 2em;
+  }
+
+  .article-image-grid {
+    display: grid;
+    height: 100vh;
+    width: 75vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 3fr 1fr;
+  }
+
+  .pic-1 {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+    border: 2px solid black;
+  }
+  .pic-2 {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    border: 2px solid black;
+  }
+  .pic-3 {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    border: 2px solid black;
+  }
+  .pic-4 {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+    border: 2px solid black;
+  }
 }

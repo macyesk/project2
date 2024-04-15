@@ -1,132 +1,133 @@
 :root {
-    --primary: #ffffff;
-    --secondary: black;
-    --accent: #8e2bff;
+  --primary: #ffffff;
+  --secondary: black;
+  --accent: #8e2bff;
 }
 
 html {
-    scroll-behavior: smooth;
-
+  scroll-behavior: smooth;
 }
 
 * {
-    background-color: var(--primary);
-    margin: 0;
-    padding: 0;
+  /* this background-color command is what is making the nav bar not be dark
+    i think we maybe want to keep it like this though? if we make it dark, we need to change the font color which 
+    i am having some trouble doing - me */
+  background-color: var(--primary);
+  margin: 0;
+  padding: 0;
 }
 
 /* nav bar styling */
 /* why isn't this making the background black? */
 .navbar.navbar-expand-lg {
-    background-color: var(--secondary);
+  background-color: var(--secondary);
 }
 
 .navbar-nav .accent-link.accent-link.accent-link.accent-link {
-    color: var(--accent)
+  color: var(--accent);
 }
 
 .navbar-nav .nav-link {
-    color: var(--secondary);
+  color: var(--secondary);
 }
 
 .navbar-nav .nav-link:hover {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 /* carousel */
 
 .hw6-container {
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
 }
 
 .slides {
-    justify-content: center;
-    background: #e3f4f4;
-    width: 95%;
-    height: 70vh;
-    overflow: hidden;
-    position: relative;
-    border: 4px solid var(--accent);
-    box-shadow: rgba(0, 0, 0, .35) 0px 5px 15px;
+  justify-content: center;
+  background: #e3f4f4;
+  width: 95%;
+  height: 70vh;
+  overflow: hidden;
+  position: relative;
+  border: 4px solid var(--accent);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .slide {
-    position: absolute;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    opacity: 0;
-    inset: 0;
-    animation: slide-show 12s infinite;
+  position: absolute;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  opacity: 0;
+  inset: 0;
+  animation: slide-show 12s infinite;
 }
 
 .slide-2 {
-    animation-delay: 4s;
+  animation-delay: 4s;
 }
 
 .slide-3 {
-    animation-delay: 8s;
+  animation-delay: 8s;
 }
 
-
 .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes slide-show {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    10% {
-        opacity: 1;
-    }
+  10% {
+    opacity: 1;
+  }
 
-    20%,
-    30% {
-        opacity: 1;
-        scale: 1.03;
-    }
+  20%,
+  30% {
+    opacity: 1;
+    scale: 1.03;
+  }
 
-    50% {
-        opacity: 0
-    }
+  50% {
+    opacity: 0;
+  }
 }
 
 .aboutus {
-    background-color: var(--primary);
-    display: grid;
-    grid-template-rows: 80px 80px 100px 100px;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    max-width: 800px;
-    margin: auto;
-    padding: 40px;
-    /* padding to add bottom of website */
-    padding-bottom: 60px;
+  background-color: var(--primary);
+  display: grid;
+  grid-template-rows: 80px 80px 100px 100px;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  max-width: 800px;
+  margin: auto;
+  padding: 40px;
+  /* padding to add bottom of website */
+  padding-bottom: 60px;
 }
 
 .card-about,
 .mission-statement {
-    grid-column: span 2;
+  grid-column: span 2;
 }
 
 .photos {
-    display: grid;
-    grid-template-columns: repeat(3, 5fr);
-    gap: 10px;
-    grid-column: span 3;
-    margin-bottom: 60px;
-    /* Adjusted margin bottom */
-    padding-bottom: 50px;
-    /* Adjusted padding bottom */
+  display: grid;
+  grid-template-columns: repeat(3, 5fr);
+  gap: 10px;
+  grid-column: span 3;
+  margin-bottom: 60px;
+  /* Adjusted margin bottom */
+  padding-bottom: 50px;
+  /* Adjusted padding bottom */
 }
 
 .photo img {
@@ -149,3 +150,4 @@ html {
         grid-column: span 1;
     }
 }
+
