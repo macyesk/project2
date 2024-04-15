@@ -41,40 +41,33 @@ html {
 
 .logo {
     position: relative;
-
-    /* Adjust as needed to move the logo down */
-    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
     background-color: transparent;
-
 }
 
 .logo img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    width: 100px;
 }
 
 .logo:hover {
-    animation: spin 3s;
+    animation: spin 3s infinite linear;
 }
 
-/* .logo:hover {
-    animation: spin 3s infinite linear;
-} */
 
 @keyframes spin {
-    from {
-        transform: rotate(0deg);
-        /* Start from 0 degree rotation */
-    }
+  from {
+    transform: rotate(0deg);
+    /* Start from 0 degree rotation */
+  }
 
-    to {
-        transform: rotate(360deg);
-        /* Rotate to 360 degrees for one complete rotation */
-    }
+  to {
+    transform: rotate(360deg);
+    /* Rotate to 360 degrees for one complete rotation */
+  }
 }
-
 /* styling for the video and background card. */
 .card {
     max-width: 600px;
