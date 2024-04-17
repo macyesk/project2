@@ -205,3 +205,32 @@ p {
 
     }
 }
+
+/* table styling */
+.mycustomers {
+    color: #8e2bff;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+th {
+    padding: 8px;
+    text-align: left;
+    background-color: #f2f2f2;
+    color: #8e2bff;
+}
+
+td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
