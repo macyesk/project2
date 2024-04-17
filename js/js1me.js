@@ -109,7 +109,7 @@ function printData(musicData) {
 
 //     for (const artist of musicData["Pop"]) {
 //         displayArtist(artist, "Pop")
-=======
+
 function printData(musicData) {
   const table = document.createElement("table");
   const headerRow = table.insertRow(0);
