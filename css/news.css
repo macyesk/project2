@@ -127,14 +127,20 @@ html {
 
 .article-pic {
   display: flex;
- 
-  overflow: hidden
+  overflow: hidden;
 }
 
 .article-pic img {
   flex-shrink: 0;
   min-width: 100%;
-  
+  object-fit: cover;
+  position: relative;
+  top: 0px;
+}
+
+.pic-2 img {
+  display: flex;
+  align-items: start;
 }
 
 @media screen and (max-width: 800px) {
