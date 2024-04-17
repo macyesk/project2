@@ -11,47 +11,70 @@
 // JS for Table on Products page ends here
 // Loop through all table rows, and hide those who don't match the search query
 
+// let rapObject = {}
+// let popObject = {}
+// let rockObject = {}
 
-document.addEventListener("DOMContentLoaded", function () {
-    const table = document.getElementById("myTable");
-    const input = document.getElementById("myInput");
+fetch("https://t3ogxvus80.execute-api.us-east-1.amazonaws.com/musicData")
+    .then((response) => response.json())
+    .then((data) => printData(data));
+// // function for defining rap rock and pop music
+// function printData(musicData) {
+//     console.log(musicData);
+//     rapObject = musicData["Rap"];
+//     popObject = musicData["Pop"];
+//     rockObject = musicData["Rock"];
 
-    input.addEventListener("keyup", function () {
-        const filter = input.value.toUpperCase();
-        fetch("https://t3ogxvus80.execute-api.us-east-1.amazonaws.com/musicData")
-            .then((response) => response.json())
-            .then((musicData) => {
-                populateTable(table, musicData, filter);
-            })
-            .catch((error) => {
-                console.error('Error fetching music data:', error);
-            });
+//     for (const artist of musicData["Rap"]) {
+//         displayArtist(artist, "Rap");
+//     }
+
+//     for (const artist of musicData["Pop"]) {
+//         displayArtist(artist, "Pop")
+//     }
+
+//     for (const artist of musicData["Rock"]) {
+//         displayArtist(artist, "Rock")
+//     }
+// }
+
+// Fetch data and call printData function
+function printData(musicData) {
+    const table = document.createElement("table");
+    const headerRow = table.insertRow(0);
+
+    // Create table headers
+    const headers = ["Artist", "Album", "Genre"];
+    headers.forEach((headerText, index) => {
+        const header = document.createElement("th");
+        header.textContent = headerText;
+        headerRow.appendChild(header);
     });
 
-    // Initial population of the table with all data
-    fetch("https://t3ogxvus80.execute-api.us-east-1.amazonaws.com/musicData")
-        .then((response) => response.json())
-        .then((musicData) => {
-            populateTable(table, musicData, '');
-        })
-        .catch((error) => {
-            console.error('Error fetching music data:', error);
-        });
-});
+    // Iterate over each genre
+    ["Rap", "Pop", "Rock"].forEach((genre) => {
+        // Iterate over each artist in the genre
+        if (musicData[genre]) {
+            for (const artistName in musicData[genre]) {
+                if (musicData[genre].hasOwnProperty(artistName)) {
+                    const artist = musicData[genre][artistName];
+                    const row = table.insertRow(-1); // Append row to the end of the table
 
-function populateTable(table, musicData, filter) {
-    // Clear table body before populating with new data
-    table.innerHTML = "";
+                    // Insert artist, album, and genre into the row
+                    const artistCell = row.insertCell(0);
+                    artistCell.textContent = artistName;
 
-    // Loop through the music data and add rows to the table
-    musicData.forEach((item) => {
-        if (item.genre.toUpperCase().includes(filter)) {
-            const row = table.insertRow();
-            const artistCell = row.insertCell(0);
-            const albumCell = row.insertCell(1);
-            artistCell.textContent = item.artist;
-            albumCell.textContent = item.album;
+                    const albumCell = row.insertCell(1);
+                    albumCell.textContent = musicData[genre][artistName].album;
+
+                    const genreCell = row.insertCell(2);
+                    genreCell.textContent = genre;
+                }
+            }
         }
     });
+
+    // Append the table to the body of the HTML page
+    document.body.appendChild(table);
 }
-// JS for Table on Products page ends here
+
