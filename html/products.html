@@ -132,19 +132,22 @@
   </div>
 
 
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..." title="Type in a name">
+  <!-- <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for an artist..."
+    title="Type in an artist name">
 
-
-
-  <script>
-    function myFunction() {
+  Your existing JavaScript code -->
+  <!-- <script>
+    function searchTable() {
+      // Declare variables
       var input, filter, table, tr, td, i, txtValue;
-      input = document.getElementById("myInput");
+      input = document.getElementById("searchInput");
       filter = input.value.toUpperCase();
       table = document.getElementById("myTable");
       tr = table.getElementsByTagName("tr");
+
+      // Loop through all table rows, and hide those that don't match the search query
       for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[2]; // the 0 allows for the artist name to be searched for. A 1 would be the album A 2 would be the genre
+        td = tr[i].getElementsByTagName("td")[0]; // Index 0 for artist name
         if (td) {
           txtValue = td.textContent || td.innerText;
           if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -155,9 +158,8 @@
         }
       }
     }
-  </script>
 
-  <!-- Adding table to retrieve data, and also adding the search function -->
+  Adding table to retrieve data, and also adding the search function --> -->
 
 
 </body>
