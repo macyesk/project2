@@ -14,7 +14,7 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
-  <script defer src="../js/js1me.js"></script>
+  <script defer src="/js/js1me.js"></script>
 
   <!-- favicon -->
   <script defer src="https://kit.fontawesome.com/04b54ca3b0.js" crossorigin="anonymous"></script>
@@ -63,7 +63,7 @@
   </section>
   <!-- logo -->
   <div class="logo">
-    <img src="/assets/logo-color.png" width="100px" height="100px" alt="Logo">
+    <img src="../assets/logo-color.png" width="100px" height="100px" alt="Logo">
   </div>
   <!-- video and about -->
   <div class="card">
@@ -79,7 +79,7 @@
       </div>
       <div class="aidanbisset-video justify-content-center">
         <video id="video" autoplay muted controls>
-          <source src="/assets/IMG_2190.mov" type="video/mp4">
+          <source src="../assets/IMG_2190.mov" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
@@ -91,7 +91,7 @@
     <!-- PHOTOS -->
     <div class="photos">
       <div class="photo1">
-        <img src="/assets/harrystyles.jpeg" alt="Photo 1">
+        <img src="../assets/harrystyles.jpeg" alt="Photo 1">
         <div class="concertrec">
           <p>Introducing our latest innovation: a cutting-edge product designed to revolutionize your concert
             experience.
@@ -102,7 +102,7 @@
         </div>
       </div>
       <div class="photo2">
-        <img src="/assets/playlist2.jpg" alt="Photo 2">
+        <img src="../assets/playlist2.jpg" alt="Photo 2">
         <div class="playlists">
           <p>Experience the ultimate in musical curation with our latest product offering. Seamlessly integrating your
             unique tastes
@@ -113,7 +113,7 @@
         </div>
       </div>
       <div class="photo3">
-        <img src="/assets/taylor2.jpg" alt="Photo 3">
+        <img src="../assets/taylor2.jpg" alt="Photo 3">
         <div class="artistspotlight">
           <p>Uncover the essence of musical brilliance with our groundbreaking artist spotlights. Offering in-depth
             artist
@@ -127,39 +127,18 @@
   </section>
 
   <!-- insert table here -->
-  <div class="mycustomers justify-content-center">
-    <h2>Music</h2>
+
+  <div class="mycustomers justify-content-center" id="table-title">
+    <h2>Album Title Search</h2>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..." title="Type in a name">
   </div>
 
 
-  <!-- <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for an artist..."
-    title="Type in an artist name">
+  
 
-  Your existing JavaScript code -->
-  <!-- <script>
-    function searchTable() {
-      // Declare variables
-      var input, filter, table, tr, td, i, txtValue;
-      input = document.getElementById("searchInput");
-      filter = input.value.toUpperCase();
-      table = document.getElementById("myTable");
-      tr = table.getElementsByTagName("tr");
 
-      // Loop through all table rows, and hide those that don't match the search query
-      for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0]; // Index 0 for artist name
-        if (td) {
-          txtValue = td.textContent || td.innerText;
-          if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "";
-          } else {
-            tr[i].style.display = "none";
-          }
-        }
-      }
-    }
+  <!-- Adding table to retrieve data, and also adding the search function -->
 
-  Adding table to retrieve data, and also adding the search function --> -->
 
 
 </body>
