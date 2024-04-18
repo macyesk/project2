@@ -21,6 +21,7 @@ fetch("https://t3ogxvus80.execute-api.us-east-1.amazonaws.com/musicData")
 
 function printData(musicData) {
   const table = document.createElement("table");
+  table.id = 'myTable';
   const headerRow = table.insertRow(0);
   document.body.appendChild(table);
 
@@ -32,7 +33,7 @@ function printData(musicData) {
     headerRow.appendChild(header);
   });
 
-  console.log(musicData);
+
   rapObject = musicData["Rap"];
   popObject = musicData["Pop"];
   rockObject = musicData["Rock"];
@@ -40,7 +41,7 @@ function printData(musicData) {
   for (const key of Object.entries(rapObject)) {
     let artistData = key;
     let artistName = artistData[0];
-    console.log(artistName);
+   
     let genreName = "Rap";
     for (const album of rapObject[`${artistName}`]["albums"]) {
       let albumTitle = album["name"];
@@ -55,14 +56,14 @@ function printData(musicData) {
       albumRow.appendChild(albumData);
       albumRow.appendChild(genreData);
       table.appendChild(albumRow);
-      console.log(albumRow.innerHTML);
+   
     }
   }
 
   for (const key of Object.entries(popObject)) {
     let artistData = key;
     let artistName = artistData[0];
-    console.log(artistName);
+
     let genreName = "Pop";
     for (const album of popObject[`${artistName}`]["albums"]) {
       let albumTitle = album["name"];
@@ -77,13 +78,13 @@ function printData(musicData) {
       albumRow.appendChild(albumData);
       albumRow.appendChild(genreData);
       table.appendChild(albumRow);
-      console.log(albumRow.innerHTML);
+
     }
   }
   for (const key of Object.entries(rockObject)) {
     let artistData = key;
     let artistName = artistData[0];
-    console.log(artistName);
+
     let genreName = "Rock";
     for (const album of rockObject[`${artistName}`]["albums"]) {
       let albumTitle = album["name"];
@@ -98,10 +99,30 @@ function printData(musicData) {
       albumRow.appendChild(albumData);
       albumRow.appendChild(genreData);
       table.appendChild(albumRow);
-      console.log(albumRow.innerHTML);
+
     }
   }
   document.body.appendChild(table);
+}
+
+function myFunction(){
+      let input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[1]; // the 0 allows for the artist name to be searched for. A 1 would be the album A 2 would be the genre
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+        console.log(table[i]);
+      }
 }
 
 // // Fetch data and call printData function

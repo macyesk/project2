@@ -14,7 +14,7 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
-  <script defer src="../js/js1me.js"></script>
+  <script defer src="/js/js1me.js"></script>
 
   <!-- favicon -->
   <script defer src="https://kit.fontawesome.com/04b54ca3b0.js" crossorigin="anonymous"></script>
@@ -127,35 +127,14 @@
   </section>
 
   <!-- insert table here -->
-  <div class="mycustomers justify-content-center">
-    <h2>My Customers</h2>
+  <div class="mycustomers justify-content-center" id="table-title">
+    <h2>Album Title Search</h2>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..." title="Type in a name">
   </div>
 
 
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..." title="Type in a name">
+  
 
-
-
-  <script>
-    function myFunction() {
-      var input, filter, table, tr, td, i, txtValue;
-      input = document.getElementById("myInput");
-      filter = input.value.toUpperCase();
-      table = document.getElementById("myTable");
-      tr = table.getElementsByTagName("tr");
-      for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[2]; // the 0 allows for the artist name to be searched for. A 1 would be the album A 2 would be the genre
-        if (td) {
-          txtValue = td.textContent || td.innerText;
-          if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "";
-          } else {
-            tr[i].style.display = "none";
-          }
-        }
-      }
-    }
-  </script>
 
   <!-- Adding table to retrieve data, and also adding the search function -->
 
