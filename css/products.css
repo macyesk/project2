@@ -211,7 +211,9 @@ p {
     color: #8e2bff;
     justify-content: center;
     align-items: center;
+
     margin-left: 6em;
+
 }
 
 table {
@@ -236,4 +238,8 @@ td {
 
 tr:nth-child(even) {
     background-color: #f2f2f2;
+}
+
+#myInput {
+    margin: 20px;
 }
