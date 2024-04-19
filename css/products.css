@@ -211,7 +211,7 @@ p {
     color: #8e2bff;
     justify-content: center;
     align-items: center;
-
+    width: 80vw;
     margin-left: 6em;
 
 }
@@ -222,6 +222,7 @@ table {
     border: 1px solid #ddd;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 10vh;
 }
 
 th {
